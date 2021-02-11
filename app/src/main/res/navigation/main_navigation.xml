@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/walletFragment"
+        android:name="com.klever.price.ui.fragments.wallet.WalletFragment"
+        android:label="WalletFragment" />
+
+    <fragment
+        android:id="@+id/marketFragments"
+        android:name="com.klever.price.ui.fragments.market.MarketFragments"
+        android:label="MarketFragments" />
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.klever.price.ui.fragments.home.HomeFragment"
+        android:label="Klever Challenge"
+        tools:layout="@layout/home_fragment" />
+    <fragment
+        android:id="@+id/listPairsFragment"
+        android:name="com.klever.price.ui.fragments.listPairs.ListPairsFragment"
+        android:label="list_pairs_fragment"
+        tools:layout="@layout/list_pairs_fragment" >
+        <action
+            android:id="@+id/action_listPairsFragment_to_marketFragments"
+            app:destination="@id/marketFragments" />
+    </fragment>
+
+</navigation>
